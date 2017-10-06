@@ -44,7 +44,6 @@ router.get('/', function(req, res) {
     .post((req, res)=> {
     let comment = new Comment();
     //body parser lets us use the req.body
-    comment.author = req.body.author;
     comment.text = req.body.text;
    comment.save((err)=> {
     if (err)
@@ -60,7 +59,6 @@ router.get('/', function(req, res) {
      res.send(err);
      //setting the new author and text to whatever was changed. If 
      //nothing was changed we will not alter the field.
-     (req.body.author) ? comment.author = req.body.author : null;
      (req.body.text) ? comment.text = req.body.text : null;
      //save comment
      comment.save((err)=> {
