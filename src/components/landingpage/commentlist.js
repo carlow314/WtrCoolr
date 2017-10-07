@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Comment from './comment';
-import style from './style';
+import style from '../style';
 class CommentList extends Component {
   render() {
     let commentNodes = this.props.data.map(comment => {

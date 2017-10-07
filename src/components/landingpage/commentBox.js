@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import CommentList from './commentlist';
 import CommentForm from './commentform';
-import style from './style';
+import style from '../style';
+
+
 class CommentBox extends Component {
  constructor(props) {
  super(props);
@@ -53,11 +55,11 @@ class CommentBox extends Component {
  return (
  <div style={ style.commentBox }>
  <h2 style={ style.title }>SISYPHUS</h2>
+ <CommentForm onCommentSubmit={ this.handleCommentSubmit }/>
  <CommentList
  onCommentDelete={ this.handleCommentDelete }
  onCommentUpdate={ this.handleCommentUpdate }
  data={ this.state.data }/>
- <CommentForm onCommentSubmit={ this.handleCommentSubmit }/>
  </div>
  )
  }

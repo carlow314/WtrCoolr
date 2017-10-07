@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import style from './style';
+import style from '../style';
 import marked from 'marked';
 class Comment extends Component {
  constructor(props) {
@@ -51,6 +51,7 @@ class Comment extends Component {
  <span dangerouslySetInnerHTML={ this.rawMarkup() } />
  <button onClick={ this.updateComment }>update</button>
  <button onClick={ this.deleteComment }>delete</button>
+ <i className="btn fa fa-heart-o fa-lg" onClick={this.updateLike} aria-hidden="true"></i>
  { (this.state.toBeUpdated)
  ? (<form onSubmit={ this.handleCommentUpdate }>
  <input
