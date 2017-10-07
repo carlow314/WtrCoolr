@@ -6,8 +6,8 @@ class CommentList extends Component {
     let commentNodes = this.props.data.map(comment => {
       return ( 
         <Comment uniqueID = {comment['_id']}
-        onCommentDelete = {this.props.onCommentDelete}
-        onCommentUpdate = {this.props.onCommentUpdate}
+        //onCommentDelete = {this.props.onCommentDelete}
+        //onCommentUpdate = {this.props.onCommentUpdate}
         key = {comment['_id']} >
         { comment.text || 'empty!'} 
         </Comment>
