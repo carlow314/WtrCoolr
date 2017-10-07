@@ -6,7 +6,6 @@ class Comment extends Component {
  super(props);
  this.state= {
  toBeUpdated: false,
- author: '',
  text: ''
  };
  //binding all our functions to this class
@@ -50,8 +49,8 @@ class Comment extends Component {
  return (
  <div style={ style.comment }>
  <span dangerouslySetInnerHTML={ this.rawMarkup() } />
- <a style={ style.updateLink } href='#' onClick={ this.updateComment }>update</a>
- <a style={ style.deleteLink } href='#' onClick={ this.deleteComment }>delete</a>
+ <button onClick={ this.updateComment }>update</button>
+ <button onClick={ this.deleteComment }>delete</button>
  { (this.state.toBeUpdated)
  ? (<form onSubmit={ this.handleCommentUpdate }>
  <input
