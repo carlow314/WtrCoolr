@@ -41,7 +41,7 @@ class CommentBox extends Component {
  });
  }
  handleCommentUpdate(id, comment) {
- //sends the comment id and new author/text to our api
+ //sends the comment id and new text to our api
  axios.put(`${this.props.url}/${id}`, comment)
  .catch(err => {
  console.log(err);
@@ -49,7 +49,7 @@ class CommentBox extends Component {
  }
  componentDidMount() {
  this.loadCommentsFromServer();
- setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+ setInterval(this.loadCommentsFromServer, 2000);
  }
  render() {
  return (
