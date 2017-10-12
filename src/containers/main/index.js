@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import './header.css';
+import header from './header.css';
+import Landing from '../../components/landing';
 
-class Header extends Component {
+class Main extends Component {
   render() {
     return (
       <div className="Header">
         <header className="jumbotron">
-          <h1 className="App-title">AppName: This is TBD</h1>
+          <h1 className="App-title">NYAME</h1>
         </header>
       </div>
     );
   }
 }
 
-export default Header;
+export default Main;
