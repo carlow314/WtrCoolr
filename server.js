@@ -10,11 +10,11 @@ const router = express.Router();
 const port = process.env.API_PORT || 3001;
 //db config
 mongoose.connect('mongodb://heroku_3b10fwpg:3mrq81trelm1ci7m06o8f53iqo@ds161304.mlab.com:61304/heroku_3b10fwpg');
-//now we should configure the API to use bodyParser and look for 
+//now we should configure the API to use bodyParser and look for
 //JSON data in the request body
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-//To prevent errors from Cross Origin Resource Sharing, we will set 
+//To prevent errors from Cross Origin Resource Sharing, we will set
 //our headers to allow CORS with middleware like so:
 app.use(function(req, res, next) {
  res.setHeader('Access-Control-Allow-Origin', '*');
@@ -57,7 +57,7 @@ router.get('/', function(req, res) {
      Comment.findById(req.params.comment_id, (err, comment)=> {
      if (err)
      res.send(err);
-     //setting the new author and text to whatever was changed. If 
+     //setting the new author and text to whatever was changed. If
      //nothing was changed we will not alter the field.
      (req.body.text) ? comment.text = req.body.text : null;
      //save comment
