@@ -7,7 +7,7 @@ const Comment = require('./models/comments');
 //and create our instances
 const app = express();
 const router = express.Router();
-const port = process.env.API_PORT || 3001;
+const port = process.env.API_PORT|| 3001;
 //db config
 mongoose.connect('mongodb://heroku_3b10fwpg:3mrq81trelm1ci7m06o8f53iqo@ds161304.mlab.com:61304/heroku_3b10fwpg');
 //now we should configure the API to use bodyParser and look for 
@@ -21,7 +21,6 @@ app.use(function(req, res, next) {
  res.setHeader('Access-Control-Allow-Credentials', 'true');
  res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
  res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
-//and remove cacheing so we get the most recent comments
  res.setHeader('Cache-Control', 'no-cache');
  next();
 });

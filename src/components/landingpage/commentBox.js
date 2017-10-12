@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import CommentList from './commentlist';
 import CommentForm from './commentform';
-import style from './style';
+import style from '../style';
+
+
 class CommentBox extends Component {
  constructor(props) {
  super(props);
@@ -39,7 +41,7 @@ class CommentBox extends Component {
  });
  }
  handleCommentUpdate(id, comment) {
- //sends the comment id and new author/text to our api
+ //sends the comment id and new text to our api
  axios.put(`${this.props.url}/${id}`, comment)
  .catch(err => {
  console.log(err);
@@ -47,17 +49,17 @@ class CommentBox extends Component {
  }
  componentDidMount() {
  this.loadCommentsFromServer();
- setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+ setInterval(this.loadCommentsFromServer, 2000);
  }
  render() {
  return (
  <div style={ style.commentBox }>
  <h2 style={ style.title }>SISYPHUS</h2>
+ <CommentForm onCommentSubmit={ this.handleCommentSubmit }/>
  <CommentList
  onCommentDelete={ this.handleCommentDelete }
  onCommentUpdate={ this.handleCommentUpdate }
  data={ this.state.data }/>
- <CommentForm onCommentSubmit={ this.handleCommentSubmit }/>
  </div>
  )
  }
