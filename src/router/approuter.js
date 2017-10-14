@@ -9,12 +9,12 @@ import Profile from '../components/profile/profile';
 import { firebaseAuth } from '../config/constants';
 import { logout } from '../helpers/auth'
 
-function PrivateRoute ({component: Component, authed, ...rest}) {
+function PrivateRoute ({component: Component, authed, user, ...rest}) {
     return (
       <Route
         {...rest}
         render={(props) => authed === true
-          ? <Component {...props} />
+          ? <Component {...props} user={user} />
           : <Redirect to={{pathname: '/login', state: {from: props.location}}} />}
       />
     )
@@ -38,10 +38,12 @@ function PrivateRoute ({component: Component, authed, ...rest}) {
   }
   componentDidMount () {
     this.removeListener = firebaseAuth().onAuthStateChanged((user) => {
+      console.log("This is the user info: " ,user);
       if (user) {
         this.setState({
           authed: true,
           loading: false,
+          user: user.email,
         })
       } else {
         this.setState({
@@ -61,7 +63,7 @@ function PrivateRoute ({component: Component, authed, ...rest}) {
           <nav className="navbar navbar-default navbar-static-top">
             <div className="container">
               <div className="navbar-header">
-                <Link to="/" className="navbar-brand">NYAME</Link>
+                <h2>NYAME</h2>
               </div>
               <ul className="nav navbar-nav pull-right">
                   {this.state.authed
@@ -86,7 +88,7 @@ function PrivateRoute ({component: Component, authed, ...rest}) {
                 <PublicRoute authed={this.state.authed} path='/Signup' component={SignUp} />
                 <PrivateRoute authed={this.state.authed} path='/dashboard' component={()=><CommentBox  url='http://localhost:3001/api/comments'
  pollInterval={2000}/>}/>
-                <PrivateRoute authed={this.state.authed} path='/profile' component={Profile} />
+                <PrivateRoute authed={this.state.authed} user={this.state.user} path='/profile' component={Profile} />
                 <Route component={PageNotFound}/>
               </Switch>
             </div>
