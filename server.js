@@ -15,13 +15,10 @@ const router = express.Router();
 
 //db config
 mongoose.connect('mongodb://heroku_3b10fwpg:3mrq81trelm1ci7m06o8f53iqo@ds161304.mlab.com:61304/heroku_3b10fwpg');
-//we should configure the API to use bodyParser and look for
+//now we should configure the API to use bodyParser and look for
 //JSON data in the request body
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-//middleware for passport user auth
-
 //To prevent errors from Cross Origin Resource Sharing, we will set
 //our headers to allow CORS with middleware like so:
 app.use(function(req, res, next) {
@@ -59,7 +56,7 @@ router.get('/', function(req, res) {
     res.json({ message: 'Comment successfully added!' });
     });
     });
-   
+
     router.route('/comments/:comment_id')
      .put((req, res)=> {
      Comment.findById(req.params.comment_id, (err, comment)=> {
