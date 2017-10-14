@@ -1,22 +1,27 @@
 import React, {Component} from 'react';
+import Comment from './comment';
+import CommentList from './commentlist';
 
 
 class LikeButton extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { liked: false };
-      this.handleClick = this.handleClick.bind(this);
-    }
-    
-    handleClick(event) {
-      this.setState({ liked: !this.state.liked});
-    }
+  constructor(props) {
+		super(props);
+    this.state = { noOfLikes: 0};
+    this.likeIt = this.likeIt.bind(this);
+  }
+  
+  likeIt() {
+  	this.setState({ noOfLikes: this.state.noOfLikes ++});
+  }
+
     render() {
-      let buttonText = this.state.liked? 'Unlike': 'Like';
       return (
-        <button onClick={this.handleClick} className="like">
+        <div>
+        <button onClick={this.likeIt} className="like">
           <i className="fa fa-heart"></i>&nbsp;
-          {buttonText}</button>
+          LIKE</button>
+          <div>{this.state.noOfLikes}</div>
+          </div>
        );
     }
   }

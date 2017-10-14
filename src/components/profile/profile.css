@@ -1,38 +1,38 @@
 .container {
-  margin: 0 auto;
-}
+    margin: 0 auto;
+  }
 
-.btn-group-vertical .btn, .btn-group-vertical .btn-group {
-  background: white;
-  color: gray;
-}
+  .btn-group-vertical .btn, .btn-group-vertical .btn-group {
+    background: white;
+    color: gray;
+  }
 
-.btn-group-vertical .btn:hover {
-  background: gray;
-  color: white;
-}
+  .btn-group-vertical .btn:hover {
+    background: gray;
+    color: white;
+  }
 
-.row {
-  margin: 20px 20px;
-}
+  .row {
+    margin: 20px 20px;
+  }
 
-.profiletitle {
-  text-align: center;
-  margin: 0 auto;
-}
+  .profiletitle {
+    text-align: center;
+    margin: 0 auto;
+  }
 
-.email {
-  float: right;
-}
+  .email {
+    float: right;
+  }
 
-.pass {
-  float: right;
-}
+  .pass {
+    float: right;
+  }
 
-.posttitle {
-  text-align: center;
-}
+  .posttitle {
+    text-align: center;
+  }
 
-.post {
-  margin: 0 auto;
-}
+  .post {
+    margin: 0 auto;
+  }

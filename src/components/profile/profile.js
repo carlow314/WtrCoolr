@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
 import styles from './profile.css';
 import Myposts from './myposts.js';
+import { userData} from '../../helpers/auth';
 
 class Profile extends Component {
+
   render() {
+    console.log("im the props", this.props)
       return (
         <div className="container">
 
@@ -14,33 +17,36 @@ class Profile extends Component {
           <div className="row">
             <div className="col-lg-2 profilenav">
               <div className="btn-group-vertical">
-                <button type="button" class="btn btn-secondary">Profile</button>
-                <button type="button" class="btn btn-secondary">Favorite Posts</button>
-                <button type="button" class="btn btn-secondary">My Posts</button>
-                <button type="button" class="btn btn-secondary">My Ranking</button>
-                <button type="button" class="btn btn-secondary">Notifications</button>
+                <button type="button" className="btn btn-secondary">Profile</button>
+                <button type="button" className="btn btn-secondary">Favorite Posts</button>
+                <button type="button" className="btn btn-secondary">My Posts</button>
+                <button type="button" className="btn btn-secondary">My Ranking</button>
+                <button type="button" className="btn btn-secondary">Notifications</button>
               </div>
             </div>
-            <div className="col-lg-10 logininfo">
-              <div className="card">
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item">email@email.com
-                    <button type="button" class="btn btn-secondary email">Change Email</button>
-                  </li>
-                  <li className="list-group-item">*****
-                    <button type="button" class="btn btn-secondary pass">Change Password</button>
-                  </li>
-                </ul>
+            <div className=" col-lg-6 logininfo">
+            <form  className='form-inline' onSubmit={this.handleSubmit}>
+              <div className="form-group">
+                <input className="form-control" ref={(email) => this.email = email} placeholder={this.props.user}/>
               </div>
-            </div>
-
+              <button type="submit" className="btn btn-primary">Change Email</button>
+            </form>
+            <form  className='form-inline' onSubmit={this.handleSubmit}>
+              <div className="form-group">
+              <input type="password" className="form-control" placeholder="Password" ref={(pw) => this.pw = pw} />
+              </div>
+              <button type="submit" className="btn btn-primary">Change Password</button>
+            </form>
           </div>
-
+          </div>
           <Myposts />
-
       </div>
       )
     }
 }
 
+<<<<<<< HEAD
 export default Profile;
+=======
+export default Profile;
+>>>>>>> 0c18269b589c8466ca6cd8ac83c6867c954c58a7

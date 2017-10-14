@@ -59,32 +59,7 @@ router.get('/', function(req, res) {
     res.json({ message: 'Comment successfully added!' });
     });
     });
-    router.route('/users')
-    //retrieve all comments from the database
-    .get((req, res)=> {
-    //looks at our Comment Schema
-    User.find((err, users)=> {
-    if (err)
-    res.send(err);
-    //responds with a json object of our database comments.
-    res.json(users)
-    });
-    })
-    .post((req, res)=> {
-        let user= new User();
-        //body parser lets us use the req.body
-        user.email= req.body.email;
-        user.password = req.body.password;
-        user.createDate = req.body.createDate;
-       user.save((err)=> {
-        if (err)
-        res.send(err);
-        res.json({ message: 'Comment successfully added!' });
-        });
-        });
-
-
-
+   
     router.route('/comments/:comment_id')
      .put((req, res)=> {
      Comment.findById(req.params.comment_id, (err, comment)=> {
@@ -93,7 +68,7 @@ router.get('/', function(req, res) {
      //setting the new author and text to whatever was changed. If
      //nothing was changed we will not alter the field.
      (req.body.text) ? comment.text = req.body.text : null;
-     (req.body.__v) ? commment.__v = req.body.__v : null;
+     (req.body.__v) ? commment.likes = req.body.__v : null;
      //save comment
      comment.save((err)=> {
      if (err)

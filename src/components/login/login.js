@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
-import { login, resetPassword } from '../../helpers/auth'
+import { login, resetPassword } from '../../helpers/auth';
+
 
 function setErrorMsg(error) {
   return {
