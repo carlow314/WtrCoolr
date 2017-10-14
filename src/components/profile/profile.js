@@ -40,21 +40,17 @@ class Profile extends Component {
               </div>
             </div>
             <div className=" col-lg-6 logininfo">
-<<<<<<< HEAD
-            <form  className='form-inline' onSubmit={this.handleSubmit}>
-=======
+
             <form  className='form-inline' onSubmit={this.handleEmailChange}>
->>>>>>> 0b0eb66cf9e648f5a15689671e01d54f98e428d3
+
               <div className="form-group">
                 <input className="form-control" ref={(email) => this.email = email} placeholder={this.props.user}/>
               </div>
               <button type="submit" className="btn btn-primary">Change Email</button>
             </form>
-<<<<<<< HEAD
-            <form  className='form-inline' onSubmit={this.handleSubmit}>
-=======
+
             <form  className='form-inline' onSubmit={this.handlePwChange}>
->>>>>>> 0b0eb66cf9e648f5a15689671e01d54f98e428d3
+
               <div className="form-group">
               <input type="password" className="form-control" placeholder="******" ref={(pw) => this.pw = pw} />
               </div>
