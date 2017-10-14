@@ -1,9 +1,6 @@
 import { ref, firebaseAuth } from '../config/constants'
 
 
-export const userData = firebaseAuth().currentUser;
-
-
 export function auth (email, pw) {
   return firebaseAuth().createUserWithEmailAndPassword(email, pw)
     .then(saveUser)
@@ -34,7 +31,7 @@ export function saveUser (user) {
   return ref.child(`users/${user.uid}/info`)
     .set({
       email: user.email,
-      uid: user.uid
+      uid: user.uid,
     })
     .then(() => user)
 }
