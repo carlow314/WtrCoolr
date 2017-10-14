@@ -1,9 +1,24 @@
 import React, {Component} from 'react';
 import styles from './profile.css';
 import Myposts from './myposts.js';
-import { userData} from '../../helpers/auth';
+import {changeEmail,changePassword} from '../../helpers/auth';
 
 class Profile extends Component {
+  handleEmailChange = (e) => {
+    e.preventDefault()
+    changeEmail(this.email.value)
+      .catch((error) => {
+          console.log(error);
+        })
+  }
+
+  handlePwChange = (e) => {
+    e.preventDefault()
+    changePassword(this.pw.value)
+      .catch((error) => {
+          console.log(error);
+        })
+  }
 
   render() {
     console.log("im the props", this.props)
@@ -25,15 +40,23 @@ class Profile extends Component {
               </div>
             </div>
             <div className=" col-lg-6 logininfo">
+<<<<<<< HEAD
             <form  className='form-inline' onSubmit={this.handleSubmit}>
+=======
+            <form  className='form-inline' onSubmit={this.handleEmailChange}>
+>>>>>>> 0b0eb66cf9e648f5a15689671e01d54f98e428d3
               <div className="form-group">
                 <input className="form-control" ref={(email) => this.email = email} placeholder={this.props.user}/>
               </div>
               <button type="submit" className="btn btn-primary">Change Email</button>
             </form>
+<<<<<<< HEAD
             <form  className='form-inline' onSubmit={this.handleSubmit}>
+=======
+            <form  className='form-inline' onSubmit={this.handlePwChange}>
+>>>>>>> 0b0eb66cf9e648f5a15689671e01d54f98e428d3
               <div className="form-group">
-              <input type="password" className="form-control" placeholder="Password" ref={(pw) => this.pw = pw} />
+              <input type="password" className="form-control" placeholder="******" ref={(pw) => this.pw = pw} />
               </div>
               <button type="submit" className="btn btn-primary">Change Password</button>
             </form>
