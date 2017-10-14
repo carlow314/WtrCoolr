@@ -1,0 +1,9 @@
+input.form-control {
+  -webkit-appearance: none;
+  background-color: #d6dcd0;
+}
+
+input[type=text] {
+  -webkit-appearance: searchfield;
+  background-color: #d6dcd0;
+}

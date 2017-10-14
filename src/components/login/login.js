@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import { login, resetPassword } from '../../helpers/auth';
+import styles from './loginSignUp.css';
 
 
 function setErrorMsg(error) {
@@ -27,10 +28,10 @@ export default class Login extends Component {
     return (
       <div className="col-sm-6 col-sm-offset-3">
         <form  className='form' onSubmit={this.handleSubmit}>
-        <div>Don't have an account yet?<Link to="/Signup">Sign up here!!!!</Link></div>    
+        <div>Don't have an account yet?<Link to="/Signup">Sign up here!!!!</Link></div>
           <div className="form-group">
             <label>Email</label>
-            <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
+            <input className="form-control loginpass" ref={(email) => this.email = email} placeholder="Email"/>
           </div>
           <div className="form-group">
             <label>Password</label>
