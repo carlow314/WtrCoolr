@@ -9,6 +9,9 @@ import Profile from '../components/profile/profile';
 import { firebaseAuth } from '../config/constants';
 import { logout } from '../helpers/auth'
 
+// CSS
+import styles from './approuter.css';
+
 function PrivateRoute ({component: Component, authed, user, ...rest}) {
     return (
       <Route
@@ -73,14 +76,15 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
                           logout()
                         }}
                         className="navbar-brand">Logout</button>
-                    : <span>
+                    :
+                      <span>
                         <Link to="/login" className="navbar-brand">Login</Link>
                         <Link to="/Signup" className="navbar-brand">Signup</Link>
                       </span>}
               </ul>
             </div>
           </nav>
-          <div className="container">
+          <div className="container logandsign">
             <div className="row">
               <Switch>
                 <Route path='/' exact component={Login} />

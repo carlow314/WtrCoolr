@@ -1,0 +1,13 @@
+.navbar {
+  background-color: #003552;
+  height: 150px;
+}
+
+h2 {
+  color: white;
+}
+
+body {
+  background-image: url("./images/tealandRedBox.png");
+  background-size: cover;
+}
