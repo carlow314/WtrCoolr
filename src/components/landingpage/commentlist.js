@@ -8,7 +8,7 @@ class CommentList extends Component {
         <Comment uniqueID = {comment['_id']}
         onCommentDelete = {this.props.onCommentDelete}
         onCommentUpdate = {this.props.onCommentUpdate}
-        key = {comment['_id']} >
+        key = {comment._id} >
         { comment.text || 'empty!'} 
         </Comment>
         )
