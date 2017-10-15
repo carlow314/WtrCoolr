@@ -88,7 +88,6 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
           </nav>
           <div className="container logandsign">
             <div className="row loginRow">
-              <div className="col-lg-8 loginBox">
               <Switch>
                 <Route path='/' exact component={Login} />
                 <PublicRoute authed={this.state.authed} path='/login' component={Login} />
@@ -98,7 +97,6 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
                 <PrivateRoute authed={this.state.authed} user={this.state.user} path='/profile' component={Profile} />
                 <Route component={PageNotFound}/>
               </Switch>
-              </div>
             </div>
           </div>
         </div>

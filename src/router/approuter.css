@@ -20,7 +20,7 @@ body {
   align-content: center;
 }
 
-.loginBox {
+/*.loginBox {
   float: none;
   display: block;
   margin: 0 auto;
@@ -35,4 +35,4 @@ body {
 	-moz-background-clip: padding;
 	-webkit-background-clip: padding;
 	background-clip: padding-box;
-}
+}*/

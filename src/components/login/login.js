@@ -26,7 +26,7 @@ export default class Login extends Component {
   }
   render () {
     return (
-      <div className="col-sm-6 col-sm-offset-3">
+      <div className="col-lg-8 loginBox">
         <form  className='form' onSubmit={this.handleSubmit}>
         <div>Don't have an account yet?<Link to="/Signup">Sign up here!!!!</Link></div>
           <div className="form-group">
