@@ -24,3 +24,20 @@ input[type=text] {
 	-webkit-background-clip: padding;
 	background-clip: padding-box;
 }
+
+.signUpHere {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.btn {
+  background-color: #003552;
+  border: #003552;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  background-color: #86ccd7;
+  border: #86ccd7;
+}

@@ -24,7 +24,7 @@ class Comment extends Component {
  handleCommentUpdate(e) {
  e.preventDefault();
  let id = this.props.uniqueID;
- //if author or text changed, set it. if not, leave null and our PUT 
+ //if author or text changed, set it. if not, leave null and our PUT
  //request will ignore it.
  let text = (this.state.text) ? this.state.text : null;
  let comment = {text: text};

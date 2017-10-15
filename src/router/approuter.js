@@ -8,6 +8,7 @@ import PageNotFound from '../components/other/pagenotfound';
 import Profile from '../components/profile/profile';
 import { firebaseAuth } from '../config/constants';
 import { logout } from '../helpers/auth'
+import logo from './images/NyameLogo.png';
 
 // CSS
 import styles from './approuter.css';
@@ -66,8 +67,15 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
           <nav className="navbar navbar-default navbar-static-top">
             <div className="container">
               <div className="navbar-header">
-                <h2>NYAME</h2>
+                <div className="col-lg-6">
+                <div className="nyamelogo">
+                  <img className="logo" src={logo} alt={"logo"}/>
+                </div>
               </div>
+              </div>
+              <div className="col-lg-6 websiteName">
+                <h2>NYAME</h2>
+                </div>
               <ul className="nav navbar-nav pull-right">
                   {this.state.authed
                     ? <button

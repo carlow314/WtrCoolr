@@ -26,9 +26,9 @@ export default class Login extends Component {
   }
   render () {
     return (
-      <div className="col-lg-8 loginBox">
+      <div className="col-sm-6 col-sm-offset-3 loginBox">
         <form  className='form' onSubmit={this.handleSubmit}>
-        <div>Don't have an account yet?<Link to="/Signup">Sign up here!!!!</Link></div>
+        <div className="signUpHere">Don't have an account yet? <Link to="/Signup"> Sign up here!</Link></div>
           <div className="form-group">
             <label>Email</label>
             <input className="form-control loginpass" ref={(email) => this.email = email} placeholder="Email"/>
@@ -45,7 +45,7 @@ export default class Login extends Component {
               &nbsp;{this.state.loginMessage} <button onClick={this.resetPassword} className="alert-link">Forgot Password?</button>
             </div>
           }
-          <button type="submit" className="btn btn-primary">Login</button>
+          <button type="submit" className="btn btn-primary btn-block">LOGIN</button>
         </form>
       </div>
     )
