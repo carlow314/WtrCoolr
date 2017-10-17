@@ -23,13 +23,9 @@ class Profile extends Component {
   render() {
     console.log("im the props", this.props)
       return (
-        <div className="container">
+        <div className="container navigation">
 
-          <div className="row">
-            <div className="profiletitle">PROFILE</div>
-          </div>
-
-          <div className="row">
+          <div className="row profile">
             <div className="col-lg-2 profilenav">
               <div className="btn-group-vertical">
                 <button type="button" className="btn btn-secondary">Profile</button>
@@ -39,26 +35,28 @@ class Profile extends Component {
                 <button type="button" className="btn btn-secondary">Notifications</button>
               </div>
             </div>
-            <div className=" col-lg-6 logininfo">
-
+            <div className="col-lg-10 logininfo">
             <form  className='form-inline' onSubmit={this.handleEmailChange}>
-
               <div className="form-group">
                 <input className="form-control" ref={(email) => this.email = email} placeholder={this.props.user}/>
               </div>
-              <button type="submit" className="btn btn-primary">Change Email</button>
+              <button type="submit" className="btn btn-primary changeEmail">Change Email</button>
             </form>
 
             <form  className='form-inline' onSubmit={this.handlePwChange}>
-
               <div className="form-group">
               <input type="password" className="form-control" placeholder="******" ref={(pw) => this.pw = pw} />
               </div>
-              <button type="submit" className="btn btn-primary">Change Password</button>
+              <button type="submit" className="btn btn-primary changePassword">Change Password</button>
             </form>
+
+            <div className="row posts">
+            <Myposts />
+            </div>
+
           </div>
           </div>
-          <Myposts />
+
       </div>
       )
     }
