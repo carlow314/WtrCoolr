@@ -3,8 +3,11 @@
 }
 
 .logo {
-  height: 100px;
+  height: 120px;
   /*width: 50px;*/
+  padding-left: 25px;
+  padding-bottom: 9px;
+
 }
 
 .websiteName {
@@ -19,8 +22,10 @@
 h2 {
   color: white;
   margin: 0 auto;
-  font-family: 'Allerta Stencil', sans-serif;
+  font-family: 'Megrim', cursive;
   text-align: left;
+  padding-left: 20px;
+  font-size: 80px
   /*font-family: 'Megrim', cursive;*/
 }
 
@@ -31,8 +36,16 @@ body {
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
   color: white;
+  margin-top: -35px;
 }
 
 .loginRow {
   align-content: center;
+}
+
+.navbar-default {
+    padding-top: 20px;
+    padding-right: 20px;
+    border-color: #e7e7e7;
+    justify-content: left;
 }
