@@ -35,7 +35,9 @@ class Profile extends Component {
                 <button type="button" className="btn btn-secondary">Notifications</button>
               </div>
             </div>
-            <div className="col-lg-10 logininfo">
+            <div className="col-lg-10 allInfo">
+              <div className="row profileTitle">PROFILE</div>
+
             <form  className='form-inline' onSubmit={this.handleEmailChange}>
               <div className="form-group">
                 <input className="form-control" ref={(email) => this.email = email} placeholder={this.props.user}/>
