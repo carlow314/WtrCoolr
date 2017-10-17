@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import styles from './profile.css';
 
-class Myposts extends Component {
+class Favposts extends Component {
   render() {
       return (
-        <div className="container myposts">
+        <div className="col-lg-10 favposts">
           <div className="row title">
-            <div className="posttitle">MY POSTS</div>
+            <div className="posttitle">FAVORITE POSTS</div>
             <div class="line-separator"></div>
           </div>
 
@@ -26,4 +26,4 @@ class Myposts extends Component {
     }
 }
 
-export default Myposts;
+export default Favposts;
