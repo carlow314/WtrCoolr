@@ -18,12 +18,10 @@
     background-color: white;
   }
 
-.title {
-  text-align: center;
-}
-
   .mycard {
     text-align: center;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .btn-group-vertical .btn, .btn-group-vertical .btn-group {
@@ -41,13 +39,19 @@
     margin: 20px 20px;
   }
 
-  .profileTitle {
+  .title {
      display: block;
     text-align: left;
     margin: 0 auto;
   }
 
-  .line-separator{
+  .favposts {
+    display: block;
+   text-align: left;
+   margin: 10px 0;
+  }
+
+  .line-separator {
     margin-bottom: 20px;
     width: 90%;
     border-bottom:0.5px solid #87cad6;
@@ -58,7 +62,7 @@
   }
 
   .post {
-    margin: 0 auto;
+    width: 650px;
   }
 
 .form-inline .form-control {

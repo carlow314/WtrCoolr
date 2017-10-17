@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import styles from './profile.css';
 import Myposts from './myposts.js';
-import Favposts from './favposts.js';
 import {changeEmail,changePassword} from '../../helpers/auth';
 
 class Profile extends Component {
@@ -36,8 +35,9 @@ class Profile extends Component {
                 <button type="button" className="btn btn-secondary">Notifications</button>
               </div>
             </div>
+
             <div className="col-lg-10 allInfo">
-              <div className="row profileTitle">PROFILE</div>
+              <div className="row title">PROFILE</div>
               <div class="line-separator"></div>
 
             <form  className='form-inline' onSubmit={this.handleEmailChange}>
@@ -54,8 +54,22 @@ class Profile extends Component {
               <button type="submit" className="btn btn-primary changePassword">Change Password</button>
             </form>
 
+{/* Favorite Posts Set Up */}
+            <div className="row favposts">
+              <div className="title">FAVORITE POSTS</div>
+              <div class="line-separator"></div>
+
+              <div className="mycard">
+                <div className="card post">
+                  <div className="card-body">
+                    Oh my gosh I freaking love this post!
+                  </div>
+                  <button type="button" class="btn btn-primary btn-sm m">Delete From Favorites</button>
+                </div>
+              </div>
+              </div>
+
           </div>
-                                <Favposts />
           </div>
 
       </div>
