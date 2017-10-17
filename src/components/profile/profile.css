@@ -1,5 +1,17 @@
 .navigation {
-    margin: 0 auto;
+  float: none;
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  align-content: center;
+  padding: 3em;
+  background-color: rgb(255, 255, 255);
+  border: 20px solid rgb(100, 100, 100);
+  border: 20px solid rgba(255,255,255, 0.4);
+  border-radius: 20px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
   }
 
   .myposts {
@@ -22,42 +34,24 @@
   }
 
   .btn-group-vertical .btn:hover {
-    background: gray;
-    color: white;
+    color: #87cad6;
   }
 
   .row {
     margin: 20px 20px;
   }
 
-  .profilenav {
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 10px 0px 0px 10px;
-    border-color: #87cad6;
-    background-color: white;
-  }
-
   .profileTitle {
-    text-align: center;
+     display: block;
+    text-align: left;
     margin: 0 auto;
   }
 
-  .allInfo {
-    border-style: solid;
-    border-width: 1px 1px 1px 0px;
-    border-radius: 0px 10px 10px 0px;
-    border-color: #87cad6;
-    background-color: white;
-  }
-
-  .email {
-    float: right;
-  }
-
-  .pass {
-    float: right;
-  }
+  .line-separator{
+    margin-bottom: 20px;
+    width: 90%;
+    border-bottom:0.5px solid #87cad6;
+    }
 
   .posttitle {
     text-align: center;
@@ -68,9 +62,10 @@
   }
 
 .form-inline .form-control {
-  width: 600px;
+  width: 500px;
   margin-top: 10px;
   margin-bottom: 20px;
+  margin-left: 2px;
 }
 
 .profiletitle {
@@ -78,14 +73,12 @@
 }
 
 .changeEmail {
-  margin: 0;
   width: 150px;
   margin-bottom: 20px;
   margin-top: 10px;
 }
 
 .changePassword {
-  margin: 0;
   width: 150px;
   margin-bottom: 20px;
   margin-top: 10px;
