@@ -65,25 +65,42 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
       <BrowserRouter>
         <div>
           <nav className="navbar navbar-default navbar-static-top">
+            <div>
+            <img className="logo nav navbar-nav pull-left" src={logo} alt={"logo"}/>
+            </div>
+            <div>
+              <h2>NYAME</h2>
+            </div>
+
+
+
             <div className="container">
+              <div className="col-lg-6 websiteName">
+
+                </div>
+
+
+
               <div className="navbar-header">
                 <div className="col-lg-6">
-                <div className="nyamelogo">
-                  <img className="logo" src={logo} alt={"logo"}/>
-                </div>
+
               </div>
               </div>
-              <div className="col-lg-6 websiteName">
-                <h2>NYAME</h2>
-                </div>
+
               <ul className="nav navbar-nav pull-right">
                   {this.state.authed
-                    ? <button
+                    ?
+                    <div> 
+                     <Link to="/dashboard" className="navbar-brand">Dashboard</Link>
+                     <Link to="/profile" className="navbar-brand">Profile</Link>  
+                    <button
                         style={{border: 'none', background: 'transparent'}}
                         onClick={() => {
                           logout()
                         }}
                         className="navbar-brand">Logout</button>
+                    </div>
+
                     :
                     <div className="navigationbuttons">
                       <span>
