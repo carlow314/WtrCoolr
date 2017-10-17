@@ -4,7 +4,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const Comment = require('./models/comments');
-const User = require('./models/user');
 const jwt = require('express-jwt');
 const env = require('dotenv').load();
 //and create our instances
