@@ -65,12 +65,14 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
       <BrowserRouter>
         <div>
           <nav className="navbar navbar-default navbar-static-top">
+            <img className="logo" src={logo} alt={"logo"}/>
             <div className="container">
+
+
+
               <div className="navbar-header">
                 <div className="col-lg-6">
-                <div className="nyamelogo">
-                  <img className="logo" src={logo} alt={"logo"}/>
-                </div>
+
               </div>
               </div>
               <div className="col-lg-6 websiteName">
