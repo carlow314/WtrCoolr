@@ -17,8 +17,9 @@ export default class SignUp extends Component {
   }
   render () {
     return (
-      <div className="col-sm-6 col-sm-offset-3">
+      <div className="col-sm-6 col-sm-offset-3 loginBox">
         <form className='form' onSubmit={this.handleSubmit}>
+          <div className="signUpHere">Sign up here!</div>
           <div className="form-group">
             <label>Email</label>
             <input className="form-control" ref={(email) => this.email = email} placeholder="Email"/>
@@ -35,7 +36,7 @@ export default class SignUp extends Component {
               &nbsp;{this.state.registerError}
             </div>
           }
-          <button type="submit" className="btn btn-primary">Register</button>
+          <button type="submit" className="btn btn-primary btn-block">REGISTER</button>
         </form>
       </div>
     )

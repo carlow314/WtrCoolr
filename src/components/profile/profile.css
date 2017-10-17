@@ -1,10 +1,24 @@
-.container {
+.navigation {
     margin: 0 auto;
   }
 
+  .myposts {
+    background-color: white;
+  }
+
+.title {
+  text-align: center;
+}
+
+  .mycard {
+    text-align: center;
+  }
+
   .btn-group-vertical .btn, .btn-group-vertical .btn-group {
+    margin: 0 auto;
     background: white;
     color: gray;
+    text-align: left;
   }
 
   .btn-group-vertical .btn:hover {
@@ -14,6 +28,22 @@
 
   .row {
     margin: 20px 20px;
+  }
+
+  .profilenav {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px 0px 0px 10px;
+    border-color: #87cad6;
+    background-color: white;
+  }
+
+  .logininfo {
+    border-style: solid;
+    border-width: 1px 1px 1px 0px;
+    border-radius: 0px 10px 10px 0px;
+    border-color: #87cad6;
+    background-color: white;
   }
 
   .profiletitle {
@@ -36,3 +66,23 @@
   .post {
     margin: 0 auto;
   }
+
+.form-inline .form-control {
+  width: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.changeEmail {
+  margin: 0;
+  width: 150px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.changePassword {
+  margin: 0;
+  width: 150px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

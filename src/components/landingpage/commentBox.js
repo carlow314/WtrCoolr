@@ -54,7 +54,7 @@ class CommentBox extends Component {
  render() {
  return (
  <div style={ style.commentBox }>
- <h2 style={ style.title }>SISYPHUS</h2>
+ <h2 style={ style.title }></h2>
  <CommentForm onCommentSubmit={ this.handleCommentSubmit }/>
  <CommentList
  onCommentDelete={ this.handleCommentDelete }
@@ -65,4 +65,3 @@ class CommentBox extends Component {
  }
 }
 export default CommentBox;
-
