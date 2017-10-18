@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import style from '../style';
 import marked from 'marked';
-import LikeButton from './likebutton';
+
 
 class Comment extends Component {
  constructor(props) {
@@ -50,10 +50,10 @@ class Comment extends Component {
  render() {
  return (
  <div style={ style.comment }>
- <span dangerouslySetInnerHTML={ this.rawMarkup() } />
- <button onClick={ this.updateComment }>update</button>
- <button onClick={ this.deleteComment }>delete</button>
- <LikeButton/>
+ <h4 dangerouslySetInnerHTML={ this.rawMarkup() } />
+ {/* <button onClick={ this.updateComment }>update</button>
+ <button onClick={ this.deleteComment }>delete</button> */}
+<button className=" btn btn-primary fa fa-heart" onClick={ this.UpdateLikes }><span value={this.state.likes}></span></button> 
  { (this.state.toBeUpdated)
  ? (<form onSubmit={ this.handleCommentUpdate }>
  <input

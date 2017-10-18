@@ -48,7 +48,7 @@ router.get('/', function(req, res) {
     let comment = new Comment();
     //body parser lets us use the req.body
     comment.text = req.body.text;
-    comment.likes = req.body.__v;
+    comment.likes = req.body.likes;
    comment.save((err)=> {
     if (err)
     res.send(err);
@@ -61,10 +61,10 @@ router.get('/', function(req, res) {
      Comment.findById(req.params.comment_id, (err, comment)=> {
      if (err)
      res.send(err);
-     //setting the new author and text to whatever was changed. If
+     //setting the text and likes to whatever was changed. If
      //nothing was changed we will not alter the field.
      (req.body.text) ? comment.text = req.body.text : null;
-     (req.body.__v) ? commment.likes = req.body.__v : null;
+     (req.body.likes) ? commment.likes = req.body.likes : null;
      //save comment
      comment.save((err)=> {
      if (err)
