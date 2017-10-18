@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import style from '../style';
-import Emoji from './emojipicker';
 
 
 class CommentForm extends Component {
