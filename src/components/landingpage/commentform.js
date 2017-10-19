@@ -26,18 +26,13 @@ class CommentForm extends Component {
   }
  render() {
  return (
- <form style={ style.commentForm } onSubmit={ this.handleSubmit }>
- <input
- type='text'
- placeholder='Say something…'
- style={ style.commentFormText}
- value={ this.state.text || this.state.emoji}
- onChange={ this.handleTextChange } />
- <input
- type='submit'
- style={ style.commentFormPost }
- value='Post'/>
- </form>
+   <form onSubmit={ this.handleSubmit }>
+  <div className="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="text" className="form-control" id="newComment" placeholder="Say something…" value={ this.state.text || this.state.emoji} onChange={ this.handleTextChange } />
+    <input type="submit"  style={ style.commentFormPost } value='Post'/>
+  </div>
+</form>
  )
  }
 }
