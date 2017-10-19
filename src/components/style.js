@@ -1,10 +1,10 @@
 //style.js
 const style = {
-    commentBox: {
-    width: '600px',
-    margin:'0 auto',
-    fontFamily:'Helvetica, sans-serif'
-    },
+    // commentBox: {
+    // width: '600px',
+    // margin:'0 auto',
+    // fontFamily:'Helvetica, sans-serif'
+    // },
     title: {
     textAlign:'center',
     textTransform:'uppercase'
