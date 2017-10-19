@@ -1,7 +1,7 @@
 //style.js
 const style = {
     commentBox: {
-    width:'80vw',
+    width: '600px',
     margin:'0 auto',
     fontFamily:'Helvetica, sans-serif'
     },
@@ -25,7 +25,8 @@ const style = {
     margin:'10px',
     display:'flex',
     flexFlow:'row wrap',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    width: '200px'
     },
     commentFormAuthor: {
     minWidth:'150px',
@@ -69,4 +70,3 @@ const style = {
     }
    }
    module.exports = style;
-   
