@@ -3,6 +3,7 @@ import axios from 'axios';
 import CommentList from './commentlist';
 import CommentForm from './commentform';
 import style from '../style';
+import styles from './comment.css';
 
 
 class CommentBox extends Component {
@@ -53,6 +54,7 @@ class CommentBox extends Component {
  }
  render() {
  return (
+   <div className="commentformBox">
  <div style={ style.commentBox }>
  <h2 style={ style.title }></h2>
  <CommentForm onCommentSubmit={ this.handleCommentSubmit }/>
@@ -60,6 +62,7 @@ class CommentBox extends Component {
  onCommentDelete={ this.handleCommentDelete }
  onCommentUpdate={ this.handleCommentUpdate }
  data={ this.state.data }/>
+ </div>
  </div>
  )
  }

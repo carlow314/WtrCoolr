@@ -1,0 +1,15 @@
+.commentformBox {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  background-color: white;
+  align-content: center;
+  padding: 3em;
+  background-color: rgb(255, 255, 255);
+  border: 20px solid rgb(100, 100, 100);
+  border: 20px solid rgba(255,255,255, 0.4);
+  border-radius: 20px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  }

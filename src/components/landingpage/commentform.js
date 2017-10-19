@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import style from '../style';
-
+import styles from './comment.css';
 
 class CommentForm extends Component {
  constructor(props) {
@@ -22,10 +22,10 @@ class CommentForm extends Component {
  this.setState({text: '' });
  }
  selectEmoji(emoji) {
-    this.setState({emoji}) 
+    this.setState({emoji})
   }
  render() {
- return (   
+ return (
  <form style={ style.commentForm } onSubmit={ this.handleSubmit }>
  <input
  type='text'
