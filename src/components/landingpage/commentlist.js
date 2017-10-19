@@ -9,7 +9,7 @@ class CommentList extends Component {
         onCommentDelete = {this.props.onCommentDelete}
         onCommentUpdate = {this.props.onCommentUpdate}
         key = {comment._id} >
-        { comment.text || 'empty!'} 
+        { comment.text || 'empty!'}
         </Comment>
         )
     })

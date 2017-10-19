@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import style from '../style';
+
+
 class CommentForm extends Component {
  constructor(props) {
  super(props);
@@ -19,14 +21,17 @@ class CommentForm extends Component {
  this.props.onCommentSubmit({text: text });
  this.setState({text: '' });
  }
+ selectEmoji(emoji) {
+    this.setState({emoji}) 
+  }
  render() {
- return (
+ return (   
  <form style={ style.commentForm } onSubmit={ this.handleSubmit }>
  <input
  type='text'
  placeholder='Say something…'
  style={ style.commentFormText}
- value={ this.state.text }
+ value={ this.state.text || this.state.emoji}
  onChange={ this.handleTextChange } />
  <input
  type='submit'
