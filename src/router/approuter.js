@@ -90,9 +90,9 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
               <ul className="nav navbar-nav pull-right">
                   {this.state.authed
                     ?
-                    <div> 
+                    <div>
                      <Link to="/dashboard" className="navbar-brand">Dashboard</Link>
-                     <Link to="/profile" className="navbar-brand">Profile</Link>  
+                     <Link to="/profile" className="navbar-brand">Profile</Link>
                     <button
                         style={{border: 'none', background: 'transparent'}}
                         onClick={() => {
