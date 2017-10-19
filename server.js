@@ -7,9 +7,10 @@ const Comment = require('./models/comments');
 const jwt = require('express-jwt');
 const env = require('dotenv').load();
 //and create our instances
-const port = process.env.API_PORT|| 3001;
+const port = process.env.PORT|| 3001;
 const app = express();
 const router = express.Router();
+const path = require('path');
 
 
 //db config
@@ -18,6 +19,7 @@ mongoose.connect('mongodb://heroku_3b10fwpg:3mrq81trelm1ci7m06o8f53iqo@ds161304.
 //JSON data in the request body
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "build")))
 //To prevent errors from Cross Origin Resource Sharing, we will set
 //our headers to allow CORS with middleware like so:
 app.use(function(req, res, next) {
@@ -48,7 +50,7 @@ router.get('/', function(req, res) {
     let comment = new Comment();
     //body parser lets us use the req.body
     comment.text = req.body.text;
-    comment.likes = req.body.__v;
+    comment.likes = req.body.likes;
    comment.save((err)=> {
     if (err)
     res.send(err);
@@ -61,10 +63,10 @@ router.get('/', function(req, res) {
      Comment.findById(req.params.comment_id, (err, comment)=> {
      if (err)
      res.send(err);
-     //setting the new author and text to whatever was changed. If
+     //setting the text and likes to whatever was changed. If
      //nothing was changed we will not alter the field.
      (req.body.text) ? comment.text = req.body.text : null;
-     (req.body.__v) ? commment.likes = req.body.__v : null;
+     (req.body.likes) ? commment.likes = req.body.likes : null;
      //save comment
      comment.save((err)=> {
      if (err)

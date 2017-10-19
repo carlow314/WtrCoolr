@@ -89,12 +89,18 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
 
               <ul className="nav navbar-nav pull-right">
                   {this.state.authed
-                    ? <button
+                    ?
+                    <div>
+                     <Link to="/dashboard" className="navbar-brand">Dashboard</Link>
+                     <Link to="/profile" className="navbar-brand">Profile</Link>
+                    <button
                         style={{border: 'none', background: 'transparent'}}
                         onClick={() => {
                           logout()
                         }}
                         className="navbar-brand">Logout</button>
+                    </div>
+
                     :
                     <div className="navigationbuttons">
                       <span>
@@ -111,7 +117,7 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
                 <Route path='/' exact component={Login} />
                 <PublicRoute authed={this.state.authed} path='/login' component={Login} />
                 <PublicRoute authed={this.state.authed} path='/Signup' component={SignUp} />
-                <PrivateRoute authed={this.state.authed} path='/dashboard' component={()=><CommentBox  url='http://localhost:3001/api/comments'
+                <PrivateRoute authed={this.state.authed} path='/dashboard' component={()=><CommentBox  url='/api/comments'
  pollInterval={2000}/>}/>
                 <PrivateRoute authed={this.state.authed} user={this.state.user} path='/profile' component={Profile} />
                 <Route component={PageNotFound}/>

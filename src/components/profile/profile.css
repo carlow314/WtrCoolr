@@ -14,16 +14,40 @@
   background-clip: padding-box;
   }
 
-  .myposts {
-    background-color: white;
+  .line-separator {
+    margin-bottom: 30px;
+    width: 90%;
+    border-bottom:0.5px solid #87cad6;
+    height: 10px;
+    }
+
+  .btn.myPosts {
+    background-color: #003552;
+    border: #003552;
+    margin: 0 auto;
+    width: 300px;
   }
 
-.title {
-  text-align: center;
-}
+  .favDelete {
+    background-color: #003552;
+    border: #003552;
+    width: 600px;
+    margin: 25px auto;
+  }
+
+  .btn.myPosts:hover {
+    background-color: #87cad6;
+    border: #87cad6;
+  }
 
   .mycard {
     text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .card-body {
+    margin-top: 20px;
   }
 
   .btn-group-vertical .btn, .btn-group-vertical .btn-group {
@@ -41,24 +65,64 @@
     margin: 20px 20px;
   }
 
-  .profileTitle {
-     display: block;
+  .title {
+    display: block;
     text-align: left;
     margin: 0 auto;
   }
 
-  .line-separator{
-    margin-bottom: 20px;
-    width: 90%;
-    border-bottom:0.5px solid #87cad6;
-    }
+  .favposts {
+    display: block;
+   text-align: left;
+   margin: 50px 0;
+  }
+
+  .ranking {
+    display: block;
+   text-align: left;
+   margin: 50px 0;
+  }
+
+  .notifications {
+    display: block;
+   text-align: left;
+   margin: 50px 0;
+  }
+
+  .myposts {
+  display: block;
+   text-align: left;
+   margin: 50px 0;
+  }
+
+  .notifications {
+    display: block;
+     text-align: left;
+     margin: 50px 0;
+  }
+
+.form-check-label {
+  padding: 0;
+  display: inline;
+}
+
+.col-auto {
+  padding: 0;
+  display: inline;
+}
+
+  .notificationButtons {
+    display: block;
+     text-align: center;
+     margin: 0 auto;
+  }
 
   .posttitle {
     text-align: center;
   }
 
   .post {
-    margin: 0 auto;
+    width: 650px;
   }
 
 .form-inline .form-control {
@@ -66,10 +130,6 @@
   margin-top: 10px;
   margin-bottom: 20px;
   margin-left: 2px;
-}
-
-.profiletitle {
-  text-align: center;
 }
 
 .changeEmail {
