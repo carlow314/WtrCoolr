@@ -7,7 +7,7 @@ const Comment = require('./models/comments');
 const jwt = require('express-jwt');
 const env = require('dotenv').load();
 //and create our instances
-const port = process.env.PORT|| 3001;
+const port = process.env.API_PORT|| 3001;
 const app = express();
 const router = express.Router();
 const path = require('path');
