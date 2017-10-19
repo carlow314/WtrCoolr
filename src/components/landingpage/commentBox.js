@@ -57,8 +57,6 @@ class CommentBox extends Component {
  <h2 style={ style.title }></h2>
  <CommentForm onCommentSubmit={ this.handleCommentSubmit }/>
  <CommentList
- onCommentDelete={ this.handleCommentDelete }
- onCommentUpdate={ this.handleCommentUpdate }
  data={ this.state.data }/>
  </div>
  )
