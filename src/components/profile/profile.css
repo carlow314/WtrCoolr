@@ -108,11 +108,13 @@
 
 .col-auto {
   padding: 0;
+  display: inline;
 }
 
   .notificationButtons {
     display: block;
      text-align: center;
+     margin: 0 auto;
   }
 
   .posttitle {
