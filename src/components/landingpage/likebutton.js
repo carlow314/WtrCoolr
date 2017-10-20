@@ -17,8 +17,8 @@ class LikeButton extends React.Component {
 	render() {
 		return (
 			<div className="customContainer">
-				<button className=" btn btn-primary fa fa-heart"  onClick={this.handleClick} />
-				<h6 className='inline'> This post has been liked: {this.state.liked} Times!!</h6>
+				<button className=" btn btn-primary fa fa-heart" onClick={this.handleClick} />
+				<h6 className="inline"> This post has been liked: {this.state.liked} Times!!</h6>
 			</div>
 		);
 	}
