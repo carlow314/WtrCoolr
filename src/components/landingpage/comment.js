@@ -8,7 +8,8 @@ class Comment extends Component {
  super(props);
  this.state= {
  toBeUpdated: false,
- text: ''
+ text: '',
+ likes: 0
  };
  //binding all our functions to this class
  this.deleteComment = this.deleteComment.bind(this);
@@ -24,7 +25,7 @@ class Comment extends Component {
  handleCommentUpdate(e) {
  e.preventDefault();
  let id = this.props.uniqueID;
- //if author or text changed, set it. if not, leave null and our PUT
+ //if text changed, set it. if not, leave null and our PUT
  //request will ignore it.
  let text = (this.state.text) ? this.state.text : null;
  let comment = {text: text};
@@ -53,7 +54,7 @@ class Comment extends Component {
  <h4 dangerouslySetInnerHTML={ this.rawMarkup() } />
  {/* <button onClick={ this.updateComment }>update</button>
  <button onClick={ this.deleteComment }>delete</button> */}
-<button className=" btn btn-primary fa fa-heart" onClick={ this.UpdateLikes }><span value={this.state.likes}></span></button> 
+<button className=" btn btn-primary fa fa-heart" onClick={ this.UpdateLikes }></button> 
  { (this.state.toBeUpdated)
  ? (<form onSubmit={ this.handleCommentUpdate }>
  <input

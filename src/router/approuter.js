@@ -117,7 +117,7 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
                 <Route path='/' exact component={Login} />
                 <PublicRoute authed={this.state.authed} path='/login' component={Login} />
                 <PublicRoute authed={this.state.authed} path='/Signup' component={SignUp} />
-                <PrivateRoute authed={this.state.authed} path='/dashboard' component={()=><CommentBox  url='http://localhost:3001/api/comments'
+                <PrivateRoute authed={this.state.authed} path='/dashboard' user={this.state.user} component={()=><CommentBox  url='http://localhost:3001/api/comments'
  pollInterval={2000}/>}/>
                 <PrivateRoute authed={this.state.authed} user={this.state.user} path='/profile' component={Profile} />
                 <Route component={PageNotFound}/>

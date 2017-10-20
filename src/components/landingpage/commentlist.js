@@ -5,12 +5,15 @@ class CommentList extends Component {
   render() {
     let commentNodes = this.props.data.map(comment => {
       return ( 
+        <div>
         <Comment uniqueID = {comment['_id']}
         onCommentDelete = {this.props.onCommentDelete}
         onCommentUpdate = {this.props.onCommentUpdate}
         key = {comment._id} >
         { comment.text || 'empty!'}
         </Comment>
+      
+        </div>
         )
     })
     return ( 
