@@ -120,7 +120,6 @@ function PrivateRoute ({component: Component, authed, user, ...rest}) {
                 <PrivateRoute authed={this.state.authed} path='/dashboard' user={this.state.user} component={()=><CommentBox  url='/api/comments'
  pollInterval={2000}/>}/>
                 <PrivateRoute authed={this.state.authed} user={this.state.user} path='/profile' component={Profile} />
-                <Route component={PageNotFound}/>
               </Switch>
             </div>
           </div>
