@@ -19,6 +19,7 @@ mongoose.connect('mongodb://heroku_3b10fwpg:3mrq81trelm1ci7m06o8f53iqo@ds161304.
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'public')));
 //To prevent errors from Cross Origin Resource Sharing, we will set
 //our headers to allow CORS with middleware like so:
 app.use(function(req, res, next) {
