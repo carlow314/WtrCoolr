@@ -7,7 +7,6 @@ const style = {
     comment: {
     backgroundColor:'#fafafa',
     'margin-bottom':'20px',
-    'margin-left':'20px',
     padding:'3px 10px',
     fontSize:'.85rem'
     },

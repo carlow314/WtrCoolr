@@ -5,11 +5,11 @@ class Form extends Component {
   render() {
     return (
       <div className="container">
-      <div className=" col-lg-12"> 
+      <div className=" col-lg-12">
       <h3> Login via </h3>
 	<div className="social-buttons">
 	<a href="#" className="btn btn-fb"><i className="fa fa-facebook"></i> Facebook</a> 
-    </div>       
+    </div>
   <form>
   <div className="form-group">
     <label className="exampleInputEmail1">Email address</label>

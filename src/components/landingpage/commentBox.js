@@ -5,7 +5,6 @@ import CommentForm from './commentform';
 import style from '../style';
 import styles from './comment.css';
 
-
 class CommentBox extends Component {
  constructor(props) {
  super(props);
