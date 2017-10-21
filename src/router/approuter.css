@@ -31,7 +31,8 @@ h2 {
 
 body {
   background-image: url("./images/tealandred.png");
-  background-size: cover;
+  background-repeat: repeat-y;
+  background-size: 120%;
 }
 
 .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {

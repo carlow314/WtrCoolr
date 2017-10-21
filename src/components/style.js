@@ -5,8 +5,8 @@ const style = {
     textTransform:'uppercase'
     },
     comment: {
-    backgroundColor:'#fafafa',
-    'margin-bottom':'20px',
+    backgroundColor:'#8ea5a3',
+    'margin-bottom':'30px',
     padding:'3px 10px',
     fontSize:'.85rem'
     },
@@ -32,7 +32,7 @@ const style = {
     height:'40px',
     margin:'5px 3px',
     fontSize:'1rem',
-    backgroundColor:'#A3CDFD',
+    backgroundColor:'#8ea5a3',
     borderRadius:'3px',
     color:'#fff',
     textTransform:'uppercase',

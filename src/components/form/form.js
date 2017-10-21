@@ -8,7 +8,7 @@ class Form extends Component {
       <div className=" col-lg-12">
       <h3> Login via </h3>
 	<div className="social-buttons">
-	<a href="#" className="btn btn-fb"><i className="fa fa-facebook"></i> Facebook</a> 
+	<a href="#" className="btn btn-fb"><i className="fa fa-facebook"></i> Facebook</a>
     </div>
   <form>
   <div className="form-group">

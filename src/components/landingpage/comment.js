@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import style from '../style';
 import marked from 'marked';
+import styles from './comment.css';
 import LikeButton from './likebutton';
 
 class Comment extends Component {
