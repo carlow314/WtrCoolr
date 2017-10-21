@@ -54,10 +54,23 @@ class CommentBox extends Component {
  }
  render() {
  return (
-   <div className="commentformBox">
+   <div className="container commentformBox">
+
  <div style={ style.commentBox }>
  <h2 style={ style.title }></h2>
  <CommentForm onCommentSubmit={ this.handleCommentSubmit }/>
+
+ <div className="dropdown">
+   <button className="btn btn-secondary dropdown-toggle dropdownBtn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+     SORT BY
+   </button>
+   <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+     <a className="dropdown-item" href="#">Most Popular</a>
+     <a className="dropdown-item" href="#">Hillarious</a>
+     <a className="dropdown-item" href="#">F**ed Up</a>
+   </div>
+ </div>
+
  <CommentList
  onCommentDelete={ this.handleCommentDelete }
  onCommentUpdate={ this.handleCommentUpdate }

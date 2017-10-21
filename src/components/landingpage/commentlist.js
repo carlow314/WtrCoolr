@@ -4,7 +4,7 @@ import style from '../style';
 class CommentList extends Component {
   render() {
     let commentNodes = this.props.data.map(comment => {
-      return ( 
+      return (
         <Comment uniqueID = {comment['_id']}
         onCommentDelete = {this.props.onCommentDelete}
         onCommentUpdate = {this.props.onCommentUpdate}
@@ -13,8 +13,8 @@ class CommentList extends Component {
         </Comment>
         )
     })
-    return ( 
-    <div style = {style.commentList} > 
+    return (
+    <div style = {style.commentList} >
       { commentNodes} </div>
     )
   }

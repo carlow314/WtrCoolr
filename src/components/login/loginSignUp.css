@@ -1,4 +1,4 @@
-nput.form-control {
+input.form-control {
   -webkit-appearance: none;
   background-color: #d6dcd0 ;
 }
@@ -12,7 +12,6 @@ input[type=text] {
   float: none;
   display: block;
   margin: 0 auto;
-  height: 400px;
   background-color: white;
   align-content: center;
   padding: 3em;

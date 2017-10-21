@@ -13,3 +13,47 @@
   -webkit-background-clip: padding;
   background-clip: padding-box;
   }
+
+.allPosts {
+  margin-bottom: 100px;
+}
+
+.dropdown {
+  color: white;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.dropdownBtn:hover {
+  color: white;
+}
+
+#newComment {
+  width: 100%;
+}
+
+  #commentformPost {
+    background-color: #003552;
+    border: #003552;
+    margin: 0 auto;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    float: right;
+    margin-top: 20px;
+  }
+
+  #commentformPost:hover {
+    background-color: #87cad6;
+    border: #87cad6;
+  }
+
+  p {
+    margin: 30px 0 20px 20px;
+  }
+
+  .fa-heart {
+    margin: 0 auto;
+  }

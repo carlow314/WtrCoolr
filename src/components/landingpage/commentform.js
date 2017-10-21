@@ -27,10 +27,9 @@ class CommentForm extends Component {
  render() {
  return (
    <form onSubmit={ this.handleSubmit }>
-  <div className="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
+  <div className="form-group allPosts">
     <input type="text" className="form-control" id="newComment" placeholder="Say something…" value={ this.state.text || this.state.emoji} onChange={ this.handleTextChange } />
-    <input type="submit"  style={ style.commentFormPost } value='Post'/>
+    <input type="submit"  id="commentformPost" value='POST'/>
   </div>
 </form>
  )
